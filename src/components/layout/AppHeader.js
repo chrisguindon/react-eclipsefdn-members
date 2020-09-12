@@ -1,5 +1,7 @@
 import React from 'react';
 
+/* eslint-disable jsx-a11y/anchor-is-valid */
+
 export default function AppHeader() {
   return (
     <header className="header-wrapper" id="header-wrapper">
@@ -32,7 +34,6 @@ export default function AppHeader() {
                     <li>
                       <a
                         href="https://accounts.eclipse.org/user/edit"
-                        className
                         data-tab-destination="tab-profile"
                       >
                         <i className="fa fa-edit" /> Edit Profile
