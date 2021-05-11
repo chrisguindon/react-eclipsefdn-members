@@ -56,7 +56,7 @@ As a side note, regeneration of the database on start along with the insertion o
 
 ### Running
 
-To run the server as a local instance as a stack, first run `npm install` in `src/main/www`, this will install all the required package for the react app. Then run `npm run build`. This will package the React app and copy it into the static web resources of the server source. To run as a development application, which is the fastest way with the least dependencies, run the following command: `mvn compile quarkus:dev -Dconfig.secret.path=$(pwd)/config/secret.properties` or `mvn compile quarkus:dev "-Dconfig.secret.path=$pwd/config/secret.properties"` when running in a Windows PowerShell.
+To run the server as a local instance as a stack, first run `yarn --cwd src/main/www`, this will install all the required package for the react app. Then run `yarn --cwd src/main/www build`. This will package the React app and copy it into the static web resources of the server source. To run as a development application, which is the fastest way with the least dependencies, run the following command: `mvn compile quarkus:dev -Dconfig.secret.path=$(pwd)/config/secret.properties` or `mvn compile quarkus:dev "-Dconfig.secret.path=$pwd/config/secret.properties"` when running in a Windows PowerShell.
 
 ## Contributing
 
