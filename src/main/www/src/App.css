@@ -1,6 +1,9 @@
 .eclipseFdn-membership-webform {
   /* Stepper */
 }
+.eclipseFdn-membership-webform .input-group .form-control {
+  z-index: unset;
+}
 .eclipseFdn-membership-webform .error {
   color: red;
 }
