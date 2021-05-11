@@ -79,7 +79,7 @@ SPDX-License-Identifier: EPL-2.0
 
 Have a bug or a feature request? Please search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/eclipsefdn/react-eclipsefdn-members/issues/new).
 
-## Author
+## Authors
 
 **Christopher Guindon (Eclipse Foundation)**
 
