@@ -6,44 +6,30 @@ Supported by our member organizations, the Eclipse Foundation provides our commu
 
 ## Getting Started
 
-### Running the project in only React App:
+Install dependencies, build assets and start a dev server:
 
-#### Setup
-Go to `src/main/js`, run `npm install`
+```bash
+yarn --cwd src/main/www
+yarn --cwd src/main/www build
+yarn --cwd src/main/www start
+```
 
-#### `npm start`
-
-Runs the app in the development mode.<br />
+The web app will run in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-#### `npm test`
+## Running the project in included web server
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-#### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### Running the project in included web server
-
-#### Dependencies to run  
+### Dependencies to run  
 
 - MariaDB
 - Keycloak
 - Maven
-- Java version 11 <
+- Java version 11
 
-#### Setup
+### Setup
 
 As part of the set up, you will need to create a `secret.properties` file within the `./config` folder and set up the secrets that are required to run the application. If named `secret.properties`, the file should be ignored by Github automatically, making it less risky that credentials are accidentally uploaded to a branch.  
 
@@ -66,9 +52,9 @@ As a side note, regeneration of the database on start along with the insertion o
 1. Setting `%dev.eclipse.dataloader.enabled` to false. This property is what enables the Data bootstrap to load in mock data.  
 2. Removing the `%dev.quarkus.hibernate-orm.database.generation` property or commenting it out. This is what resets the database to empty on start.
 
-#### Running
+### Running
 
-To run the server as a local instance as a stack, first run `npm install` in `src/main/js`, this will install all the required package for the react app. Then run `npm run build`. This will package the React app and copy it into the static web resources of the server source. To run as a development application, which is the fastest way with the least dependencies, run the following command: `mvn compile quarkus:dev -Dconfig.secret.path=$(pwd)/config/secret.properties` or `mvn compile quarkus:dev "-Dconfig.secret.path=$pwd/config/secret.properties"` when running in a Windows PowerShell.
+To run the server as a local instance as a stack, first run `npm install` in `src/main/www`, this will install all the required package for the react app. Then run `npm run build`. This will package the React app and copy it into the static web resources of the server source. To run as a development application, which is the fastest way with the least dependencies, run the following command: `mvn compile quarkus:dev -Dconfig.secret.path=$(pwd)/config/secret.properties` or `mvn compile quarkus:dev "-Dconfig.secret.path=$pwd/config/secret.properties"` when running in a Windows PowerShell.
 
 ## Contributing
 
@@ -109,13 +95,13 @@ Have a bug or a feature request? Please search for existing and closed issues. I
 - <https://twitter.com/chrisguindon>
 - <https://github.com/chrisguindon>
 
-**Yi Liu (Eclipse Foundation)**
-
-- <https://github.com/flora8984461>
-
 **Martin Lowe (Eclipse Foundation)**
 
 - <https://github.com/autumnfound>
+
+**Zhou Fang (Eclipse Foundation)**
+
+- <https://github.com/linkfang>
 
 ## Trademarks
 
@@ -124,4 +110,4 @@ Have a bug or a feature request? Please search for existing and closed issues. I
 
 ## Copyright and license
 
-Copyright 2020 the [Eclipse Foundation, Inc.](https://www.eclipse.org) and the [react-eclipsefdn-members authors](https://github.com/eclipsefdn/react-eclipsefdn-members/graphs/contributors). Code released under the [Eclipse Public License Version 2.0 (EPL-2.0)](https://github.com/eclipsefdn/react-eclipsefdn-members/blob/src/LICENSE).
+Copyright 2021 the [Eclipse Foundation, Inc.](https://www.eclipse.org) and the [react-eclipsefdn-members authors](https://github.com/eclipsefdn/react-eclipsefdn-members/graphs/contributors). Code released under the [Eclipse Public License Version 2.0 (EPL-2.0)](https://github.com/eclipsefdn/react-eclipsefdn-members/blob/src/LICENSE).

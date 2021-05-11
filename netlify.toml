@@ -1,4 +1,4 @@
 [build]
-  base = "src/main/js"
+  base = "src/main/www"
   command = "rm -rf node_modules && yarn --frozen-lockfile && yarn build"
   publish = "build"
