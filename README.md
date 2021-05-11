@@ -6,7 +6,9 @@ Supported by our member organizations, the Eclipse Foundation provides our commu
 
 ## Getting Started
 
-Install dependencies, build assets and start a dev server:
+Before you start, please make sure you have [yarn](https://classic.yarnpkg.com/en/docs/install/) installed.
+
+Once that's done, you can install dependencies, build assets and start a dev server:
 
 ```bash
 yarn --cwd src/main/www
