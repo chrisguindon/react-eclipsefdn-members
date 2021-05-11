@@ -2,7 +2,8 @@ language: node_js
 node_js:
   - stable
 install:
-  - yarn --cwd src/main/js
+  - yarn --cwd src/main/js --frozen-lockfile
   - yarn --cwd src/main/js build
+script:
   - yarn --cwd src/main/js test
   - yarn --cwd src/main/js test-spec
