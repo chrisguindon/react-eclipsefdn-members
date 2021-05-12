@@ -60,7 +60,7 @@ To run the server as a local instance as a stack, first run `yarn --cwd src/main
 
 ### Docker
 
-We include a `docker-compose.yml` file with this project to start all the required services for this project. This includes:
+We include a `docker-compose.yml` file with this project to help you get started. This includes:
 
 * [mariadb:latest](https://hub.docker.com/_/mariadb)
 * [postgres:12.4](https://hub.docker.com/_/postgres)
