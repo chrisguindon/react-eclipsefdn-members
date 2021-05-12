@@ -5,8 +5,8 @@ services:
     ports:
       - 3306:3306
     environment:
-      MYSQL_ROOT_PASSWORD: ${EWT_MYSQL_PASSWORD}
-      MYSQL_DATABASE: eclipsefoundationdb
+      MYSQL_ROOT_PASSWORD: ${REM_MYSQL_PASSWORD}
+      MYSQL_DATABASE: rem_quarkus_api
     volumes:
      - ./volumes/mariadb:/var/lib/mysql
   postgres:
