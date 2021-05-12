@@ -60,7 +60,7 @@ To run the server as a local instance as a stack, first run `yarn --cwd src/main
 
 ### Docker
 
-We include a docker-compose.yml file with this project to start all the required services for this project. This includes:
+We include a `docker-compose.yml` file with this project to start all the required services for this project. This includes:
 
 * [mariadb:latest](https://hub.docker.com/_/mariadb)
 * [postgres:12.4](https://hub.docker.com/_/postgres)
@@ -72,7 +72,7 @@ We include a docker-compose.yml file with this project to start all the required
 
 #### Environment Variables
 
-To use our docker-compose.yml file, create a .env file in the root of this project and insert your key/value pairs in the following format of KEY=VALUE:
+To use our `docker-compose.yml` file, create a `.env` file in the root of this project and insert your key/value pairs in the following format of KEY=VALUE. You must make sure to update the value of each variable:
 
 ```sh
 REM_KEYCLOAK_USER=user_sample
