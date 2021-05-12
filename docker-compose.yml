@@ -6,7 +6,9 @@ services:
       - 3306:3306
     environment:
       MYSQL_ROOT_PASSWORD: ${EWT_MYSQL_PASSWORD}
-      MYSQL_DATABASE: quarkus_rem
+      MYSQL_DATABASE: eclipsefoundationdb
+    volumes:
+     - ./volumes/mariadb:/var/lib/mysql
   postgres:
     container_name: postgres
     image: postgres:12.4
