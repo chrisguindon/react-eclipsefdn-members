@@ -68,7 +68,7 @@ We include a `docker-compose.yml` file with this project to help you get started
 * [osixia/openldap](https://hub.docker.com/r/osixia/openldap)*
 * [osixia/phpldapadmin](https://hub.docker.com/r/osixia/phpldapadmin)*
 
-*OpenLDAP is required for the moment but we are including for testing purposes with Keycloak.
+*OpenLDAP is not required for the moment but we are including for testing purposes with Keycloak.
 
 #### Environment Variables
 
