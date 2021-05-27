@@ -72,13 +72,6 @@ We include a `docker-compose.yml` file with this project to help you get started
 
 *OpenLDAP is not required for the moment but we are including for testing purposes with Keycloak.
 
-#### Getting Started with Docker
-
-```bash
-make generate-cert # this will create a self-signed cert for added https support in development.
-make compile-start
-```
-
 #### Generate Certs for HTTPS
 
 , You will need to create a certificate in order to serve the Application on https. Make sure that the Common Name (e.g. server FQDN or YOUR name) is set to `www.rem.docker`.
@@ -122,7 +115,7 @@ REM_POSTGRES_PASSWORD=password_sample
 Once this initial setup is done, you can start these services with this command:
 
 ```sh
-docker-compose up
+make compile-start
 ```
 
 ### KeyCloak Setup
