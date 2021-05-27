@@ -71,12 +71,23 @@ We include a `docker-compose.yml` file with this project to help you get started
 
 *OpenLDAP is not required for the moment but we are including for testing purposes with Keycloak.
 
-### Add hostname 
+### Update your Host file
 
-127.0.0.1 www.rem.docker
+We use [jwilder/nginx-proxy](https://hub.docker.com/r/jwilder/nginx-proxy) as automated Nginx reverse proxy for our docker containers. So instead of having to lookup the port of a new service, you can simply remember it's internal dev hostname.
+
+Different operating system, different file paths!
+
+Windows: C:\Windows\System32\drivers\etc\hosts
+Linux / MacOS: /etc/hosts
+
+```
+# rem services
+
 127.0.0.1 keycloak
 127.0.0.1 api.rem.docker
+127.0.0.1 www.rem.docker
 127.0.0.1 ldap-admin.rem.docker
+```
 
 #### Environment Variables
 
