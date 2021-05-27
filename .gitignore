@@ -7,12 +7,14 @@ node_modules
 
 # docker volumes
 volumes/
+certs
 
 # testing
 /coverage
 
 # production
 build
+
 
 # misc
 .DS_Store

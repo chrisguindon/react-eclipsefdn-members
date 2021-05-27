@@ -72,6 +72,14 @@ We include a `docker-compose.yml` file with this project to help you get started
 
 *OpenLDAP is not required for the moment but we are including for testing purposes with Keycloak.
 
+#### Generate Certs for HTTPS
+
+, You will need to create a certificate in order to serve the Application on https. Make sure that the Common Name (e.g. server FQDN or YOUR name) is set to `www.rem.docker`.
+
+```sh
+make generate-cert
+```
+
 ### Update your Host file
 
 We use [jwilder/nginx-proxy](https://hub.docker.com/r/jwilder/nginx-proxy) as automated Nginx reverse proxy for our docker containers. So instead of having to lookup the port of a new service, you can simply remember it's internal dev hostname.
