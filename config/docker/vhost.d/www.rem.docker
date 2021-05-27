@@ -9,3 +9,7 @@ location /login {
 location /userinfo {
   proxy_pass http://api:8090/userinfo;
 }
+
+location /logout {
+  proxy_pass http://api:8090/logout;
+}
