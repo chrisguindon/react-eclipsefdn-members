@@ -14,6 +14,7 @@ Once that's done, you can install dependencies, build assets and start a dev ser
 yarn --cwd src/main/www
 yarn --cwd src/main/www build
 yarn --cwd src/main/www start
+yarn --cwd src/main/www start-spec
 ```
 
 The web app will run in the development mode.
