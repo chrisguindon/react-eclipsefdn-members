@@ -75,9 +75,8 @@ We include a `docker-compose.yml` file with this project to help you get started
 #### Getting Started with Docker
 
 ```bash
-make compile
-make generate-cert
-docker-compose up
+make generate-cert # this will create a self-signed cert for added https support in development.
+make compile-start
 ```
 
 #### Generate Certs for HTTPS
