@@ -80,7 +80,7 @@ We include a `docker-compose.yml` file with this project to help you get started
 make generate-cert
 ```
 
-### Update your Host file
+#### Update your Host file
 
 We use [jwilder/nginx-proxy](https://hub.docker.com/r/jwilder/nginx-proxy) as automated Nginx reverse proxy for our docker containers. So instead of having to lookup the port of a new service, you can simply remember it's internal dev hostname.
 
@@ -134,7 +134,7 @@ To login as the user, you will need to set an initial password. To set a passwor
 
 Clients tab allows you to manage list of allowed applications.
 
-To create a client, click on `Clients` in the left menu. You can set the client_id to `rem_app` and the `Root URL` to `http://localhost:3000`. Make sure that the `Client Protocol` is set to `openid-connect`.
+To create a client, click on `Clients` in the left menu. You can set the client_id to `rem_app` and the `Root URL` to `http://localhost:3000`. Make sure that the `Client Protocol` is set to `openid-connect`  and the `Access Type` is set to `confidential`.
 
 ## Contributing
 
