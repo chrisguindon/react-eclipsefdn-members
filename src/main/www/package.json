@@ -14,7 +14,6 @@
     "concurrently": "^6.1.0",
     "country-list": "^2.2.0",
     "formik": "^2.2.6",
-    "i": "^0.3.6",
     "less-watch-compiler": "^1.15.1",
     "react": "^17.0.0",
     "react-app-polyfill": "^2.0.0",
