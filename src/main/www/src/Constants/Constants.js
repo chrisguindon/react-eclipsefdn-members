@@ -4,8 +4,11 @@
  * The purpose of this file is try to avoid using strings directly everywhere,
  * just hope to use consistent variables for strings.
  */
-export const api_prefix = 'https://www.rem.docker';
-export const api_prefix_form = api_prefix + '/form';
+export const api_prefix = () => {
+  return  '//' + window.location.host;
+}
+
+export const api_prefix_form = api_prefix() + '/form';
 
 export const COMPANY_INFORMATION = 'Company Information';
 export const MEMBERSHIP_LEVEL = 'Membership Level';
@@ -71,5 +74,5 @@ export function getCurrentMode() {
   if (window.location.href.includes('//www.rem.docker/')) {
     return MODE_REACT_API;
   }
- return MODE_REACT_ONLY
+  return MODE_REACT_ONLY;
 }
