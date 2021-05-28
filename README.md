@@ -130,6 +130,31 @@ To create a `user`, visit [Keycloak Admin Console](http://localhost:8080/auth/ad
 
 To login as the user, you will need to set an initial password. To set a password, click on `Credentials`,  then set a password via the `Set Password` form. You will need to enter it twice to confirm it. You will probably want to disable `Temporary` password by clicking on the `ON` button to turn that feature off.
 
+#### Eclipse Foundation as an Identity Provider
+
+It's possible to delegate authentication to third party identity providers with Keycloak. Our with this App is to leverage [Eclipse Foundation OpenID Connect](https://wiki.eclipse.org/OpenID) since we want user to login with our standard login page. In order to do so, you will need a client_id/secret from us.
+
+Assuming that you have access this already, please follow these steps to add the Eclipse Foundation as an `Identify Provider`.
+
+1. Click on `Identity Providers` in the left menu then click on `Add provider...`. Select `OpenID Connect v1.0` from the dropdown menu.
+
+2. Populate the form with the following information:
+
+Alias : eclipsefdn
+Display Name: Eclipse Foundation
+Sync Mode : Force (To make sure the user is updated each time they login)
+Authorization URL: https://accounts.eclipse.org/oauth2/authorize
+Token URL: https://accounts.eclipse.org/oauth2/token
+Logout URL: https://accounts.eclipse.org/oauth2/revoke
+User Info URL: https://accounts.eclipse.org/oauth2/UserInfo
+Client Authentication: Client secret sent as post
+Client ID: <CLIENT_ID>
+Client Secret: <CLIENT_SECRET>
+Default Scopes: openid profile email offline_access
+
+3. Finally, we want to configure Eclipse Foundation has the only authentication option. Click on `Authentication` in the left menu. Set `Identity Provider Redirector(oidc)` to `required` and `Forms` to `disabled`. Finally, click on Actions and set `eclipsefdn` has the Default Identity Provider.
+
+
 #### Client Configuration
 
 Clients tab allows you to manage list of allowed applications.
