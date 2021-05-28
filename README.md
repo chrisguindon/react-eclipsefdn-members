@@ -140,6 +140,7 @@ Assuming that you have access this already, please follow these steps to add the
 
 2. Populate the form with the following information:
 
+```
 Alias : eclipsefdn
 Display Name: Eclipse Foundation
 Sync Mode : Force (To make sure the user is updated each time they login)
@@ -151,6 +152,7 @@ Client Authentication: Client secret sent as post
 Client ID: <CLIENT_ID>
 Client Secret: <CLIENT_SECRET>
 Default Scopes: openid profile email offline_access
+```
 
 3. Finally, we want to configure Eclipse Foundation has the only authentication option. Click on `Authentication` in the left menu. Set `Identity Provider Redirector(oidc)` to `required` and `Forms` to `disabled`. Finally, click on Actions and set `eclipsefdn` has the Default Identity Provider.
 
