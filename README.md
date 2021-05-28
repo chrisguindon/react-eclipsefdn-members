@@ -132,7 +132,7 @@ To login as the user, you will need to set an initial password. To set a passwor
 
 #### Eclipse Foundation as an Identity Provider
 
-It's possible to delegate authentication to third party identity providers with Keycloak. With this App, we want to leverage [Eclipse Foundation OpenID Connect](https://wiki.eclipse.org/OpenID) since we want user to login with our standard login page. In order to do so, you will need a client_id/secret from us.
+It's possible to delegate authentication to third party identity providers with Keycloak. With this App, we want to leverage [Eclipse Foundation OpenID Connect](https://wiki.eclipse.org/OpenID) since we want our users to login with our standard login page. In order to do so, you will need a client_id/secret from us.
 
 Assuming you have access to that already, please follow these steps to add the Eclipse Foundation as an `Identify Provider`.
 
