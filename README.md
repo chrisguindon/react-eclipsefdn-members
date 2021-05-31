@@ -67,10 +67,6 @@ We include a `docker-compose.yml` file with this project to help you get started
 * [mariadb:latest](https://hub.docker.com/_/mariadb)
 * [postgres:12.4](https://hub.docker.com/_/postgres)
 * [jboss/keycloak:11.0.1](https://hub.docker.com/r/jboss/keycloak/)
-* [osixia/openldap](https://hub.docker.com/r/osixia/openldap)*
-* [osixia/phpldapadmin](https://hub.docker.com/r/osixia/phpldapadmin)*
-
-*OpenLDAP is not required for the moment but we are including for testing purposes with Keycloak.
 
 #### Generate Certs for HTTPS
 
@@ -95,7 +91,6 @@ Linux / MacOS: /etc/hosts
 127.0.0.1 keycloak
 127.0.0.1 api.rem.docker
 127.0.0.1 www.rem.docker
-127.0.0.1 ldap-admin.rem.docker
 ```
 
 #### Environment Variables
@@ -105,7 +100,6 @@ To use our `docker-compose.yml` file, create a `.env` file in the root of this p
 ```sh
 REM_KEYCLOAK_USER=user_sample
 REM_KEYCLOAK_PASSWORD=password_sample
-REM_LDAP_ADMIN_PASSWORD=password_sample
 REM_MYSQL_PASSWORD=password_sample
 REM_POSTGRES_DB=keycloak_sample
 REM_POSTGRES_USER=keycloak_sample
