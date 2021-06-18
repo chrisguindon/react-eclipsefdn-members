@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: eclipsefdn-react-membership
+  name: eclipsefdn-react-membership-staging
   namespace: foundation-internal-webdev-apps
   labels:
     app: eclipsefdn-react-membership
@@ -87,7 +87,7 @@ spec:
 apiVersion: "v1"
 kind: "Service"
 metadata:
-  name: eclipsefdn-react-membership
+  name: eclipsefdn-react-membership-staging
   namespace: foundation-internal-webdev-apps
 spec:
   ports:
@@ -102,7 +102,7 @@ spec:
 apiVersion: "route.openshift.io/v1"
 kind: "Route"
 metadata:
-  name: eclipsefdn-react-membership
+  name: eclipsefdn-react-membership-staging
   namespace: foundation-internal-webdev-apps
   annotations:
     haproxy.router.openshift.io/timeout: 20s
@@ -118,5 +118,5 @@ spec:
     termination: "edge"
   to:
     kind: "Service"
-    name: eclipsefdn-react-membership
+    name: eclipsefdn-react-membership-staging
     weight: 100
