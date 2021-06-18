@@ -1,6 +1,15 @@
 version: '3'
 services:
   www:
+    build:
+      context: .
+      dockerfile: ./src/main/docker/Dockerfile.www
+    image: eclipsefdn/membership-rest-api-www:latest
+    ports:
+      - 8080
+    environment:
+      - VIRTUAL_HOST=nginx.rem.docker
+  nodejs:
     build: ./src/main/www
     image: eclipsefdn/membership-www:latest
     ports:
