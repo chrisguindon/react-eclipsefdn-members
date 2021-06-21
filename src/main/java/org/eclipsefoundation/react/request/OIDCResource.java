@@ -34,13 +34,13 @@ import org.eclipse.microprofile.config.inject.ConfigProperty;
 public class OIDCResource extends AbstractRESTResource {
 
     @ConfigProperty(name = "eclipse.app.base-url", defaultValue = "/")
-    String base_url;
+    String baseUrl;
 
     @GET
     @Authenticated
     @Path("/login")
     public Response routeLogin() throws URISyntaxException {
-        return redirect(base_url);
+        return redirect(baseUrl);
     }
 
     /**
@@ -51,7 +51,7 @@ public class OIDCResource extends AbstractRESTResource {
     @GET
     @Path("/logout")
     public Response routeLogout() throws URISyntaxException {
-        return redirect(base_url);
+        return redirect(baseUrl);
     }
 
     @GET
