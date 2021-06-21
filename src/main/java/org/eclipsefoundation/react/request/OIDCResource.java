@@ -33,7 +33,7 @@ import org.eclipse.microprofile.config.inject.ConfigProperty;
 @Path("")
 public class OIDCResource extends AbstractRESTResource {
 
-    @ConfigProperty(name = "eclipse.app.base_url", defaultValue = "/")
+    @ConfigProperty(name = "eclipse.app.base-url", defaultValue = "/")
     String base_url;
 
     @GET
@@ -87,7 +87,6 @@ public class OIDCResource extends AbstractRESTResource {
     private Response redirect(String location) throws URISyntaxException {
         return Response.temporaryRedirect(new URI(location)).build();
     }
-
 
     public static class InfoWrapper {
         String name;
