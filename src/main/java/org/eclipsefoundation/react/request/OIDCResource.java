@@ -23,6 +23,8 @@ import javax.ws.rs.core.Response;
 import io.quarkus.security.Authenticated;
 import io.smallrye.jwt.auth.principal.DefaultJWTCallerPrincipal;
 
+import org.eclipse.microprofile.config.inject.ConfigProperty;
+
 /**
  * Handles OIDC routing for the request.
  *
@@ -31,11 +33,14 @@ import io.smallrye.jwt.auth.principal.DefaultJWTCallerPrincipal;
 @Path("")
 public class OIDCResource extends AbstractRESTResource {
 
+    @ConfigProperty(name = "eclipse.app.base_url", defaultValue = "/")
+    String base_url;
+
     @GET
     @Authenticated
     @Path("/login")
     public Response routeLogin() throws URISyntaxException {
-        return redirect("http://nginx.rem.docker/");
+        return redirect(base_url);
     }
 
     /**
@@ -46,7 +51,7 @@ public class OIDCResource extends AbstractRESTResource {
     @GET
     @Path("/logout")
     public Response routeLogout() throws URISyntaxException {
-        return redirect("/");
+        return redirect(base_url);
     }
 
     @GET
