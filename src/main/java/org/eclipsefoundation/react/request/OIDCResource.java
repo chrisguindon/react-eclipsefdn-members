@@ -35,7 +35,7 @@ public class OIDCResource extends AbstractRESTResource {
     @Authenticated
     @Path("/login")
     public Response routeLogin() throws URISyntaxException {
-        return redirect("/");
+        return redirect("http://nginx.rem.docker/");
     }
 
     /**
@@ -83,7 +83,7 @@ public class OIDCResource extends AbstractRESTResource {
         return Response.temporaryRedirect(new URI(location)).build();
     }
 
-    
+
     public static class InfoWrapper {
         String name;
         String givenName;
