@@ -17,5 +17,5 @@ compile-start: compile;
 	docker-compose down
 	docker-compose build
 	docker-compose up
-spect-start: validate-spec;
+spec-start: validate-spec;
 	yarn --cwd src/main/www start-spec
