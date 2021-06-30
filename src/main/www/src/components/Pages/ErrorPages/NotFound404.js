@@ -1,6 +1,8 @@
+import AppTemplate from '../../UIComponents/layout/AppTemplate';
+
 export default function NotFound404() {
   return (
-    <>
+    <AppTemplate>
       <h1>404 File not found</h1>
       <p>
         We're sorry, the page you requested cannot be found. Below are some
@@ -34,6 +36,6 @@ export default function NotFound404() {
           <a href="mailto:webmaster@eclipse.org">Email the webmaster</a>
         </li>
       </ul>
-    </>
+    </AppTemplate>
   );
 }
