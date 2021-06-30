@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import AppTemplate from './components/UIComponents/layout/AppTemplate';
 import MembershipContext from './Context/MembershipContext';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core';
 import {
@@ -54,9 +55,11 @@ const App = () => {
 
             <Route exact path="/application">
               <MembershipContext.Provider value={membershipContextValue}>
-                <HashRouter hashType="noslash">
-                  <Main />
-                </HashRouter>
+                <AppTemplate>
+                  <HashRouter hashType="noslash">
+                    <Main />
+                  </HashRouter>
+                </AppTemplate>
               </MembershipContext.Provider>
             </Route>
 
@@ -65,15 +68,20 @@ const App = () => {
             </Route>
 
             <Route exact path="/404">
-              <NotFound404 />
+              <AppTemplate>
+                <NotFound404 />
+              </AppTemplate>
             </Route>
 
             <Route exact path="/50x">
-              <InternalError50x />
+              <AppTemplate>
+                <InternalError50x />
+              </AppTemplate>
             </Route>
 
             {/* Redirect user to 404 page for all the unknown pathnames/urls */}
             <Redirect to="404" />
+
           </Switch>
         </BrowserRouter>
       </ThemeProvider>

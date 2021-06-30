@@ -16,7 +16,6 @@ import { validationSchema } from '../UIComponents/FormComponents/ValidationSchem
 import { executeSendDataByStep } from '../../Utils/formFunctionHelpers';
 import MembershipContext from '../../Context/MembershipContext';
 import TopSlideMsg from '../UIComponents/Notifications/TopSlideMsg';
-import AppTemplate from '../UIComponents/layout/AppTemplate';
 
 export default function Main() {
   const history = useHistory();
@@ -240,7 +239,7 @@ export default function Main() {
   );
 
   return (
-    <AppTemplate>
+    <>
       <Switch>
         <Route exact path="/">
           <Redirect to="/sign-in" />
@@ -333,6 +332,6 @@ export default function Main() {
         shouldShowUp={isLoginExpired}
         msgContent={LOGIN_EXPIRED_MSG}
       />
-    </AppTemplate>
+    </>
   );
 }
