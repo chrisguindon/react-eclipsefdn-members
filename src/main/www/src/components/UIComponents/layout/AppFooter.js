@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function AppFooter() {
   return (
-    <div>
+    <>
       <p id="back-to-top">
         <a className="visible-xs" href="#top">
           Back to the top
@@ -217,6 +217,6 @@ export default function AppFooter() {
           </div>
         </div>
       </footer>
-    </div>
+    </>
   );
 }
