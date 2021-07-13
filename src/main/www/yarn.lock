@@ -6309,10 +6309,10 @@ ecc-jsbn@~0.1.1:
     jsbn "~0.1.0"
     safer-buffer "^2.1.0"
 
-eclipsefdn-solstice-assets@^0.0.161:
-  version "0.0.161"
-  resolved "https://registry.yarnpkg.com/eclipsefdn-solstice-assets/-/eclipsefdn-solstice-assets-0.0.161.tgz#c257ca348981224a8cc4290602877cf50ed7537f"
-  integrity sha512-dKeZappEGhA3oKRCAqs18vf9ZrA083BPeitcFfbliA8COZpqPENOdoBFbO4SdM5JQ6bBsnaoZDH9nhBfd8c4kw==
+eclipsefdn-solstice-assets@^0.0.162:
+  version "0.0.162"
+  resolved "https://registry.yarnpkg.com/eclipsefdn-solstice-assets/-/eclipsefdn-solstice-assets-0.0.162.tgz#df538d5ff56fdac15321b336eddc1274100c8a1a"
+  integrity sha512-K8gYPdqwiMJxaoSk4wPJXi9NzF8xjPmS9nJwcgONZRzR9/cRQ2CNJB38xuFPiuc+pY1m6AyY00szNvHSkSrrdg==
   dependencies:
     "@babel/plugin-proposal-class-properties" "^7.12.1"
     "@babel/plugin-syntax-class-properties" "^7.12.1"
